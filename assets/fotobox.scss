@@ -1,0 +1,134 @@
+.subtitle {
+  text-align: center;
+  padding-top: 2rem;
+}
+.subtitletxt  {
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+.fotos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.foto.links {
+  border-bottom: none;
+ }
+.foto {
+  text-align:  center;
+  border: $border;
+  width: auto;
+}
+.fotoright {
+  text-align:  center;
+  border-left:  $border;
+  border-right:  $border;
+  border-bottom: $border;
+  width: 100%;
+}
+.fototxt {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 3% 0 5% 4%;
+  font-size: 0.75rem;
+}
+.img {
+  height: auto;
+  padding-top: 6%;
+  width: 88%;
+}
+.shopbtn  {
+  width: 100%;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 1.5%;
+  font-weight: bold;
+  border-right: $border;
+  border-left: $border;
+  height: 4rem;
+}
+.button.men {
+  border-bottom: $border;
+}
+.women {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shopbtn.womensmall,
+.button.womensmall {
+  display: block;
+}
+.button.women {
+  display: none;
+}
+@include breakpoint(md) {
+  .subtitle {
+    font-size: 1rem;
+  }
+  .subtitletxt {
+    font-size: 1.5rem;
+  }
+  .foto.links {
+    border-bottom: $border;
+    border-right: none;
+  }
+  .foto {
+    border: $border;
+    width: 50%;
+  }
+  .fotoright {
+    border: $border;
+    border-left: none;
+    width: 50%;
+  }
+  .fototxt {
+    font-size: 1rem;
+  }
+  .shopbtn.womensmall,
+  .button.womensmall {
+    display: block;
+  }
+  .button.men{
+    margin-bottom: 11%;
+  }
+}
+@include breakpoint(l) {
+  .foto {
+    border: $border;
+    width: 25%;
+  }
+  .foto.twee {
+    border-right: none;
+  }
+  .fotoright {
+    border: $border;
+    border-left: none;
+    width: 25%;
+  }
+  .shopbtn{
+    width: 100%;
+    display: flex;
+  }
+  .button.women {
+    border-bottom: $border;
+    border-right: none;
+  }
+  .shopbtn.womensmall,
+  .button.womensmall {
+    display: none;
+  }
+  .button.women {
+    display: block;
+  }
+}
+
+

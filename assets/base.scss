@@ -1,0 +1,25 @@
+body {
+  font-family: $font;
+}
+html {
+  @include html
+}
+header {
+  @include header
+}
+h1 {
+  @include primary-header
+}
+h2 {
+  @include secondary-header
+}
+h3 {
+  @include tertaire-header
+}
+p {
+  @include content
+}
+a {
+ @include hyperlink
+}
+

@@ -1,0 +1,85 @@
+/*********************
+Variables
+*********************/
+
+$font:  'Merriweather', serif;
+$fontsize: 16px;
+$border: 1px solid black;
+$background: #ffffff;
+
+/*********************
+Mixins
+*********************/
+
+@mixin html {
+  margin: 0 2.5% 0 2.5%;
+  font-family: $font;
+}
+@mixin primary-header {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bolder;
+}
+@mixin secondary-header {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bolder;
+}
+@mixin tertaire-header {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bolder;
+}
+@mixin header {
+  background: $background;
+  padding: 10px;
+  font-family: $font;
+  margin-top: 7%;
+}
+@mixin header-content-men {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+@mixin content {
+  text-align: center;
+  font-size: $fontsize;
+}
+@mixin buttonmobile {
+  width: 50%;
+  height: 100%;
+  border-right: none;
+  border-left: none;
+}
+@mixin buttonipad {
+  width: 33.333%;
+  justify-content: space-around;
+}
+@mixin txtimg {
+  font-size: 0.85rem;
+  font-weight: bolder;
+  text-align: left;
+  line-height: 1;
+}
+@mixin hyperlink {
+  color: #333333;
+}
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  @if $point == xl {
+    @media screen and (min-width: 1240px) { @content; }
+  }
+  @else if $point == l {
+    @media screen and (min-width: 1024px) { @content; }
+  }
+  @else if $point == md {
+    @media screen and (min-width: 768px) { @content; }
+  }
+  @else if $point == sm {
+    @media screen and (min-width: 550px)  { @content; }
+  }
+}
+

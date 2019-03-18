@@ -1,0 +1,27 @@
+.fotobox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: $border;
+  border-right: none;
+}
+.foto {
+  width: 50%;
+  border: none;
+  border-right: $border;
+  padding: 2%;
+}
+.txtimg {
+  @include txtimg;
+  margin-left: 6%;
+  padding-top: 1rem;
+}
+.txtimg.bedrag {
+  margin-top: 0.5rem;
+}
+/*Width 1024*/
+@include breakpoint(l) {
+  .foto {
+    width: 25%;
+  }
+}
